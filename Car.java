@@ -13,12 +13,15 @@ public class Car extends Vehicle {
 
     public double totalBurning() {
 
+        if (isHaveIRan()==false){
         double burning = getBurning100();
         if (isAirCon()) {
             burning = getBurning100() + 0.8;
             setBurning100(burning);
         }
-        return burning;
+        setHaveIRan(true);
+        }
+        return getBurning100();
     }
 
     void showInfo() {

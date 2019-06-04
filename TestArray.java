@@ -23,8 +23,6 @@ public class TestArray {
             System.out.print("\n");
         }
 
-
-
     }
 
 }

@@ -15,8 +15,8 @@ public class Truck extends Car {
     }
 
 
-    @Override
     public double totalBurning() {
+        if (isHaveIRan()==false){
         double burning = getBurning100();
         if (weight > 0) {
             burning = getBurning100() + 0.5 * (weight / 100);
@@ -27,8 +27,10 @@ public class Truck extends Car {
             burning = getBurning100() + 1.6;
             setBurning100(burning);
         }
+        setHaveIRan(true);
+        return burning;}
+        else return getBurning100();
 
-        return burning;
     }
 
     void showInfo() {

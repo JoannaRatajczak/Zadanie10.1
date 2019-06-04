@@ -2,6 +2,15 @@ public class Vehicle {
     private String name;
     private double capacity;
     private double burning100;
+    private boolean haveIRan=false;
+
+    public boolean isHaveIRan() {
+        return haveIRan;
+    }
+
+    public void setHaveIRan(boolean haveIRan) {
+        this.haveIRan = haveIRan;
+    }
 
     public Vehicle(String name, double capacity, double burning100) {
         this.name = name;
@@ -33,7 +42,7 @@ public class Vehicle {
         return getBurning100();
     }
 
-    public void setBurning100(double burning100) {
+    public final void setBurning100(double burning100) {
         this.burning100 = burning100;
     }
 
